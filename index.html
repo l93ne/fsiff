@@ -3,69 +3,474 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Описание вашего сайта — измените под ваш проект">
-    <meta name="keywords" content="ключевые слова, ваш проект">
-    <meta name="author" content="Ваше имя">
 
-    <!-- Open Graph (для превью в соцсетях) -->
-    <meta property="og:title" content="Название сайта">
-    <meta property="og:description" content="Описание сайта">
+    <title>EasyGate — VPN для России | Обход блокировок</title>
+    <meta name="description" content="Стабильный VPN для России на протоколе VLESS/Reality. Не определяется DPI, скорость до 1 Гбит/с, серверы в Европе. От 99 ₽/мес, оплата картой РФ.">
+    <meta name="keywords" content="VPN Россия, обход блокировок, VLESS Reality, купить VPN, дешёвый VPN">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="EasyGate — VPN для России">
+    <meta property="og:description" content="VLESS/Reality — не блокируется. Серверы в Европе. От 99 ₽/мес.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ваш-домен.ru/">
+    <meta property="og:url" content="https://sub.easygate.site/">
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://ваш-домен.ru/">
+    <link rel="canonical" href="https://sub.easygate.site/">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <title>Главная — Название сайта</title>
-
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-    <!-- Шапка вынесена в отдельный компонент -->
-    <div id="header-placeholder"></div>
+<!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+<header class="header" id="header">
+    <div class="container header__inner">
+        <a href="/" class="logo">
+            <svg class="logo__icon" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                <path d="M15 2L4 7.2V15c0 6.6 4.8 12.8 11 14.2C22.2 27.8 27 21.6 27 15V7.2L15 2Z" fill="url(#lg-header)"/>
+                <path d="M10.5 15.5L13.5 18.5L19.5 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs>
+                    <linearGradient id="lg-header" x1="4" y1="2" x2="27" y2="29" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#6366f1"/>
+                        <stop offset="1" stop-color="#a855f7"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+            <span>EasyGate</span>
+        </a>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h1>Заголовок вашего сайта</h1>
-                <p class="hero__subtitle">Краткое описание — что делает ваш проект</p>
-                <a href="pages/about.html" class="btn btn--primary">Узнать больше</a>
+        <nav class="nav" id="nav">
+            <a href="#features" class="nav__link">Преимущества</a>
+            <a href="#how" class="nav__link">Как работает</a>
+            <a href="#pricing" class="nav__link">Тарифы</a>
+            <a href="#faq" class="nav__link">FAQ</a>
+        </nav>
+
+        <div class="header__right">
+            <a href="https://t.me/EasyGate_paybot" class="btn btn--primary btn--sm" target="_blank" rel="noopener">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8-1.7 8.04c-.12.58-.48.72-.96.44l-2.66-1.96-1.28 1.24c-.14.14-.26.26-.54.26l.18-2.7 4.82-4.36c.2-.18-.05-.28-.32-.1L7.6 14.52l-2.6-.82c-.56-.18-.58-.56.12-.82l10.16-3.92c.48-.16.9.12.76.84z"/></svg>
+                Telegram
+            </a>
+            <button class="burger" id="burger" aria-label="Открыть меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+<section class="hero" id="hero">
+    <div class="hero__bg">
+        <div class="orb orb--1"></div>
+        <div class="orb orb--2"></div>
+        <div class="hero__grid"></div>
+    </div>
+
+    <div class="container hero__body">
+        <div class="badge fade-up">
+            <span class="badge__dot"></span>
+            Работает в России · VLESS/Reality
+        </div>
+
+        <h1 class="hero__title fade-up">
+            Интернет<br>
+            <span class="g-text">без блокировок</span>
+        </h1>
+
+        <p class="hero__desc fade-up">
+            EasyGate работает на протоколе VLESS/Reality — трафик выглядит как обычный HTTPS.
+            Роскомнадзор и DPI его не видят. Скорость до&nbsp;1&nbsp;Гбит/с, серверы в Европе.
+        </p>
+
+        <div class="hero__actions fade-up">
+            <a href="#pricing" class="btn btn--primary btn--xl">
+                Выбрать тариф
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="https://t.me/EasyGate_paybot" class="btn btn--ghost btn--xl" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8-1.7 8.04c-.12.58-.48.72-.96.44l-2.66-1.96-1.28 1.24c-.14.14-.26.26-.54.26l.18-2.7 4.82-4.36c.2-.18-.05-.28-.32-.1L7.6 14.52l-2.6-.82c-.56-.18-.58-.56.12-.82l10.16-3.92c.48-.16.9.12.76.84z"/></svg>
+                Написать в бот
+            </a>
+        </div>
+
+        <div class="hero__stats fade-up">
+            <div class="hstat">
+                <span class="hstat__val">99.9%</span>
+                <span class="hstat__lbl">Uptime</span>
             </div>
-        </section>
+            <div class="hstat__sep"></div>
+            <div class="hstat">
+                <span class="hstat__val">1 Гбит/с</span>
+                <span class="hstat__lbl">Скорость</span>
+            </div>
+            <div class="hstat__sep"></div>
+            <div class="hstat">
+                <span class="hstat__val">3 страны</span>
+                <span class="hstat__lbl">Серверов</span>
+            </div>
+            <div class="hstat__sep"></div>
+            <div class="hstat">
+                <span class="hstat__val">от 99 ₽</span>
+                <span class="hstat__lbl">В месяц</span>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <section class="features">
-            <div class="container">
-                <h2>Что мы предлагаем</h2>
-                <div class="features__grid">
-                    <div class="feature-card">
-                        <h3>Раздел 1</h3>
-                        <p>Описание раздела</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Раздел 2</h3>
-                        <p>Описание раздела</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>Раздел 3</h3>
-                        <p>Описание раздела</p>
-                    </div>
+<!-- ═══════════════════════════════ FEATURES ═══════════════════════════════ -->
+<section class="section features" id="features">
+    <div class="container">
+        <div class="sec-header fade-up">
+            <span class="sec-label">Преимущества</span>
+            <h2>Почему выбирают <span class="g-text">EasyGate</span></h2>
+            <p>Сделан специально под Россию — знаем все методы блокировок и успешно их обходим</p>
+        </div>
+
+        <div class="features__grid">
+            <div class="fcard fade-up">
+                <div class="fcard__icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                </div>
+                <h3>Максимальная скорость</h3>
+                <p>VLESS работает напрямую без лишних обёрток. До 1 Гбит/с — стриминг 4K, видеозвонки и загрузки без задержек.</p>
+            </div>
+
+            <div class="fcard fade-up">
+                <div class="fcard__icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                </div>
+                <h3>Не определяется DPI</h3>
+                <p>Reality маскирует трафик под обычный HTTPS. Провайдер видит подключение к легитимному сайту — не VPN.</p>
+            </div>
+
+            <div class="fcard fade-up">
+                <div class="fcard__icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                </div>
+                <h3>Все устройства</h3>
+                <p>iOS, Android, Windows, macOS, Linux. Один ключ — все устройства. Инструкция по установке придёт на email.</p>
+            </div>
+
+            <div class="fcard fade-up">
+                <div class="fcard__icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </div>
+                <h3>Серверы в Европе</h3>
+                <p>Финляндия, Нидерланды, Германия. Минимальная задержка для российских пользователей.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════ HOW IT WORKS ═══════════════════════════════ -->
+<section class="section how" id="how">
+    <div class="container">
+        <div class="sec-header fade-up">
+            <span class="sec-label">Подключение</span>
+            <h2>Три шага до <span class="g-text">свободного интернета</span></h2>
+        </div>
+
+        <div class="how__steps">
+            <div class="how__step fade-up">
+                <div class="how__num">01</div>
+                <div class="how__content">
+                    <h3>Выберите тариф</h3>
+                    <p>Введите email, нажмите «Купить» — откроется страница ЮКасса. Оплата картой РФ (Visa, Mastercard, МИР), быстро и безопасно.</p>
                 </div>
             </div>
-        </section>
-    </main>
+            <div class="how__line fade-up"></div>
+            <div class="how__step fade-up">
+                <div class="how__num">02</div>
+                <div class="how__content">
+                    <h3>Получите ключ</h3>
+                    <p>После оплаты на email придёт письмо со ссылкой-конфигурацией и инструкцией по установке. Ключ также доступен в Telegram-боте.</p>
+                </div>
+            </div>
+            <div class="how__line fade-up"></div>
+            <div class="how__step fade-up">
+                <div class="how__num">03</div>
+                <div class="how__content">
+                    <h3>Подключитесь</h3>
+                    <p>Установите приложение (Streisand, v2rayNG, Hiddify), импортируйте ссылку одной кнопкой — и вы онлайн.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Подвал вынесен в отдельный компонент -->
-    <div id="footer-placeholder"></div>
+<!-- ═══════════════════════════════ PRICING ═══════════════════════════════ -->
+<section class="section pricing" id="pricing">
+    <div class="container">
+        <div class="sec-header fade-up">
+            <span class="sec-label">Тарифы</span>
+            <h2>Простые и <span class="g-text">честные цены</span></h2>
+            <p>Никаких скрытых платежей и авторекурренции. Оплатили — доступ на срок.</p>
+        </div>
 
-    <script src="js/components.js"></script>
-    <script src="js/main.js"></script>
+        <div class="ptoggle fade-up" id="ptoggle">
+            <button class="ptoggle__btn active" data-period="1">1 месяц</button>
+            <button class="ptoggle__btn" data-period="3">
+                3 месяца
+                <span class="ptoggle__badge">−16%</span>
+            </button>
+        </div>
+
+        <div class="pricing__grid">
+            <!-- Individual -->
+            <div class="pcard fade-up"
+                 data-id-1="indiv_1" data-id-3="indiv_3"
+                 data-name="Индивидуальный">
+                <div class="pcard__head">
+                    <div class="pcard__icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </div>
+                    <div>
+                        <h3>Индивидуальный</h3>
+                        <p class="pcard__sub">до 3 устройств</p>
+                    </div>
+                </div>
+
+                <div class="pcard__price">
+                    <span class="pcard__amount" data-p1="99" data-p3="249">99</span>
+                    <div class="pcard__price-meta">
+                        <span class="pcard__currency">₽</span>
+                        <span class="pcard__period" data-l1="/ месяц" data-l3="/ 3 месяца">/ месяц</span>
+                    </div>
+                </div>
+                <p class="pcard__saving" hidden>Экономия 48 ₽</p>
+
+                <ul class="pcard__features">
+                    <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>До 3 устройств одновременно</li>
+                    <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Серверы FI / NL / DE</li>
+                    <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Скорость до 1 Гбит/с</li>
+                    <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Поддержка в Telegram</li>
+                </ul>
+
+                <button class="btn btn--outline btn--full js-buy" data-plan-id="indiv_1">Купить</button>
+            </div>
+
+            <!-- Pair (popular) -->
+            <div class="pcard pcard--hot fade-up"
+                 data-id-1="pair_1" data-id-3="pair_3"
+                 data-name="Парный">
+                <div class="pcard__popular">Популярный</div>
+
+                <div class="pcard__head">
+                    <div class="pcard__icon pcard__icon--accent">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <div>
+                        <h3>Парный</h3>
+                        <p class="pcard__sub">до 6 устройств</p>
+                    </div>
+                </div>
+
+                <div class="pcard__price">
+                    <span class="pcard__amount" data-p1="169" data-p3="429">169</span>
+                    <div class="pcard__price-meta">
+                        <span class="pcard__currency">₽</span>
+                        <span class="pcard__period" data-l1="/ месяц" data-l3="/ 3 месяца">/ месяц</span>
+                    </div>
+                </div>
+                <p class="pcard__saving" hidden>Экономия 78 ₽</p>
+
+                <ul class="pcard__features">
+                    <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>До 6 устройств одновременно</li>
+                    <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Серверы FI / NL / DE</li>
+                    <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Скорость до 1 Гбит/с</li>
+                    <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Для семьи или друзей</li>
+                    <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Поддержка в Telegram</li>
+                </ul>
+
+                <button class="btn btn--primary btn--full js-buy" data-plan-id="pair_1">Купить</button>
+            </div>
+        </div>
+
+        <p class="pricing__note fade-up">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Оплата через ЮКасса — Visa, Mastercard, МИР. Автопродление не подключается.
+        </p>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════ FAQ ═══════════════════════════════ -->
+<section class="section faq" id="faq">
+    <div class="container">
+        <div class="sec-header fade-up">
+            <span class="sec-label">FAQ</span>
+            <h2>Частые <span class="g-text">вопросы</span></h2>
+        </div>
+
+        <div class="faq__list fade-up">
+            <div class="faq__item">
+                <button class="faq__q">
+                    Что такое VLESS/Reality и чем это лучше обычного VPN?
+                    <svg class="faq__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq__a">
+                    <p>Обычные протоколы (OpenVPN, WireGuard) легко определяются системами DPI и блокируются. VLESS/Reality маскирует трафик под легитимный HTTPS: провайдер видит обращение к обычному сайту — не VPN-сервер.</p>
+                </div>
+            </div>
+
+            <div class="faq__item">
+                <button class="faq__q">
+                    На каких устройствах работает?
+                    <svg class="faq__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq__a">
+                    <p>iOS — Streisand или v2Box. Android — v2rayNG или Hiddify. Windows и macOS — Hiddify. Linux — v2rayNG. Подробная инструкция придёт на email после оплаты.</p>
+                </div>
+            </div>
+
+            <div class="faq__item">
+                <button class="faq__q">
+                    Сколько устройств можно подключить одновременно?
+                    <svg class="faq__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq__a">
+                    <p>Индивидуальный тариф — до 3 устройств одновременно. Парный — до 6. Один ключ работает на всех устройствах, но активных одновременно не более лимита.</p>
+                </div>
+            </div>
+
+            <div class="faq__item">
+                <button class="faq__q">
+                    Что происходит после окончания подписки?
+                    <svg class="faq__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq__a">
+                    <p>Доступ автоматически отключается. Автопродления нет — вы платите только тогда, когда сами хотите. Для продления купите новый ключ — конфиг в приложении обновится автоматически.</p>
+                </div>
+            </div>
+
+            <div class="faq__item">
+                <button class="faq__q">
+                    Что делать, если VPN не работает?
+                    <svg class="faq__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq__a">
+                    <p>Пишите в Telegram @EasyGate_paybot — поддержка реагирует в течение нескольких часов. При технических проблемах на нашей стороне срок подписки компенсируется.</p>
+                </div>
+            </div>
+
+            <div class="faq__item">
+                <button class="faq__q">
+                    Вы сохраняете логи активности?
+                    <svg class="faq__chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="faq__a">
+                    <p>Нет. Мы не храним логи интернет-активности. Только технические метрики (объём трафика, статус соединения) для поддержания работы сервиса. Email используется только для отправки ключа.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════ CTA STRIP ═══════════════════════════════ -->
+<section class="cta-strip">
+    <div class="container">
+        <div class="cta-strip__inner fade-up">
+            <div>
+                <h2>Остались вопросы?</h2>
+                <p>Напишите в Telegram-бот — ответим быстро</p>
+            </div>
+            <a href="https://t.me/EasyGate_paybot" class="btn btn--primary btn--xl" target="_blank" rel="noopener">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8-1.7 8.04c-.12.58-.48.72-.96.44l-2.66-1.96-1.28 1.24c-.14.14-.26.26-.54.26l.18-2.7 4.82-4.36c.2-.18-.05-.28-.32-.1L7.6 14.52l-2.6-.82c-.56-.18-.58-.56.12-.82l10.16-3.92c.48-.16.9.12.76.84z"/></svg>
+                @EasyGate_paybot
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="footer__brand">
+                <a href="/" class="logo">
+                    <svg class="logo__icon" width="28" height="28" viewBox="0 0 30 30" fill="none">
+                        <path d="M15 2L4 7.2V15c0 6.6 4.8 12.8 11 14.2C22.2 27.8 27 21.6 27 15V7.2L15 2Z" fill="url(#lg-footer)"/>
+                        <path d="M10.5 15.5L13.5 18.5L19.5 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                            <linearGradient id="lg-footer" x1="4" y1="2" x2="27" y2="29" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#6366f1"/>
+                                <stop offset="1" stop-color="#a855f7"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span>EasyGate</span>
+                </a>
+                <p>Стабильный VPN для России.<br>Работает там, где другие сдаются.</p>
+            </div>
+
+            <nav class="footer__nav">
+                <h4>Навигация</h4>
+                <a href="#features">Преимущества</a>
+                <a href="#how">Как работает</a>
+                <a href="#pricing">Тарифы</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+
+            <div class="footer__contact">
+                <h4>Поддержка</h4>
+                <a href="https://t.me/EasyGate_paybot" target="_blank" rel="noopener">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8-1.7 8.04c-.12.58-.48.72-.96.44l-2.66-1.96-1.28 1.24c-.14.14-.26.26-.54.26l.18-2.7 4.82-4.36c.2-.18-.05-.28-.32-.1L7.6 14.52l-2.6-.82c-.56-.18-.58-.56.12-.82l10.16-3.92c.48-.16.9.12.76.84z"/></svg>
+                    @EasyGate_paybot
+                </a>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p>&copy; <span id="year"></span> EasyGate</p>
+            <p>Сервис предоставляется в ознакомительных целях</p>
+        </div>
+    </div>
+</footer>
+
+<!-- ═══════════════════════════════ MODAL ═══════════════════════════════ -->
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal__overlay" id="modal-overlay"></div>
+    <div class="modal__box">
+        <button class="modal__close" id="modal-close" aria-label="Закрыть">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+
+        <div class="modal__header">
+            <div class="modal__plan-icon">
+                <svg width="22" height="22" viewBox="0 0 30 30" fill="none"><path d="M15 2L4 7.2V15c0 6.6 4.8 12.8 11 14.2C22.2 27.8 27 21.6 27 15V7.2L15 2Z" fill="url(#lg-modal)"/><path d="M10.5 15.5L13.5 18.5L19.5 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="lg-modal" x1="4" y1="2" x2="27" y2="29" gradientUnits="userSpaceOnUse"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs></svg>
+            </div>
+            <div>
+                <h3 id="modal-title">Оформление подписки</h3>
+                <p id="modal-desc" class="modal__sub"></p>
+            </div>
+        </div>
+
+        <form class="modal__form" id="modal-form" novalidate>
+            <div class="mfield">
+                <label for="m-email">Email для получения ключа</label>
+                <input type="email" id="m-email" name="email" placeholder="your@email.com" autocomplete="email" required>
+                <span class="mfield__err" id="m-email-err"></span>
+            </div>
+
+            <div class="modal__price-line" id="modal-price-line"></div>
+
+            <button type="submit" class="btn btn--primary btn--full" id="modal-pay-btn">
+                <span class="btn-text">Перейти к оплате</span>
+                <span class="btn-spin hidden">
+                    <svg class="spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                    Загрузка…
+                </span>
+            </button>
+
+            <p class="modal__legal">Нажимая «Перейти к оплате», вы соглашаетесь с условиями использования</p>
+        </form>
+
+        <div class="modal__err-msg hidden" id="modal-err-msg"></div>
+    </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/payment.js"></script>
 </body>
 </html>

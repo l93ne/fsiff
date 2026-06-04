@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /webhook/
 
-Sitemap: https://ваш-домен.ru/sitemap.xml
+Sitemap: https://sub.easygate.site/sitemap.xml

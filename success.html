@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата прошла — EasyGate</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .success-wrap {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem var(--px);
+        }
+        .success-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: clamp(2rem, 5vw, 3.5rem);
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        .success-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background: rgba(34,197,94,0.12);
+            border: 2px solid rgba(34,197,94,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.75rem;
+            color: #22c55e;
+        }
+        .success-card h1 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+        }
+        .success-card p {
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 0.75rem;
+        }
+        .success-steps {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+            text-align: left;
+        }
+        .success-steps h3 {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+        .success-steps ol {
+            list-style: decimal;
+            padding-left: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .success-steps li {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        .success-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+    </style>
+</head>
+<body>
+<div class="success-wrap">
+    <div class="success-card">
+        <div class="success-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+            </svg>
+        </div>
+
+        <h1>Оплата прошла!</h1>
+        <p>Ключ для подключения уже отправлен на ваш email. Проверьте папку «Входящие» (и «Спам» на всякий случай).</p>
+
+        <div class="success-steps">
+            <h3>Что делать дальше</h3>
+            <ol>
+                <li>Откройте письмо от EasyGate — там ссылка-конфиг и инструкция</li>
+                <li>Установите приложение: Streisand (iOS/macOS), v2rayNG (Android), Hiddify (Windows)</li>
+                <li>Нажмите «Импортировать» и вставьте ссылку — VPN готов к работе</li>
+            </ol>
+        </div>
+
+        <div class="success-actions">
+            <a href="https://t.me/EasyGate_paybot" class="btn btn--primary btn--full" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8-1.7 8.04c-.12.58-.48.72-.96.44l-2.66-1.96-1.28 1.24c-.14.14-.26.26-.54.26l.18-2.7 4.82-4.36c.2-.18-.05-.28-.32-.1L7.6 14.52l-2.6-.82c-.56-.18-.58-.56.12-.82l10.16-3.92c.48-.16.9.12.76.84z"/></svg>
+                Открыть Telegram-бот
+            </a>
+            <a href="/" class="btn btn--ghost btn--full">Вернуться на сайт</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
