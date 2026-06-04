@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Описание вашего сайта — измените под ваш проект">
+    <meta name="keywords" content="ключевые слова, ваш проект">
+    <meta name="author" content="Ваше имя">
+
+    <!-- Open Graph (для превью в соцсетях) -->
+    <meta property="og:title" content="Название сайта">
+    <meta property="og:description" content="Описание сайта">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ваш-домен.ru/">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://ваш-домен.ru/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+    <title>Главная — Название сайта</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+    <!-- Шапка вынесена в отдельный компонент -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Заголовок вашего сайта</h1>
+                <p class="hero__subtitle">Краткое описание — что делает ваш проект</p>
+                <a href="pages/about.html" class="btn btn--primary">Узнать больше</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Что мы предлагаем</h2>
+                <div class="features__grid">
+                    <div class="feature-card">
+                        <h3>Раздел 1</h3>
+                        <p>Описание раздела</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Раздел 2</h3>
+                        <p>Описание раздела</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Раздел 3</h3>
+                        <p>Описание раздела</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал вынесен в отдельный компонент -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

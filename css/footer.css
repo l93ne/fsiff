@@ -1,0 +1,56 @@
+.site-footer {
+    background-color: var(--color-bg-subtle);
+    border-top: 1px solid var(--color-border);
+    padding-block: var(--space-12);
+    margin-top: auto;
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-8);
+    margin-bottom: var(--space-8);
+}
+
+.footer__brand .logo {
+    display: inline-block;
+    margin-bottom: var(--space-3);
+}
+
+.footer__brand p {
+    color: var(--color-text-muted);
+    font-size: var(--text-sm);
+    max-width: 280px;
+}
+
+.footer__nav h4 {
+    font-size: var(--text-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-4);
+}
+
+.footer__nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.footer__nav a {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    transition: color var(--transition);
+}
+
+.footer__nav a:hover {
+    color: var(--color-primary);
+}
+
+.footer__bottom {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-6);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
