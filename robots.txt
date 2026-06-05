@@ -1,6 +1,10 @@
+# robots.txt — https://sub.easygate.site/
+# Разрешаем индексировать сайт всем поисковикам, кроме служебных путей.
+
 User-agent: *
 Allow: /
 Disallow: /api/
 Disallow: /webhook/
+Disallow: /webapp
 
 Sitemap: https://sub.easygate.site/sitemap.xml
